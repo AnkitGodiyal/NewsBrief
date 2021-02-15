@@ -4,12 +4,11 @@ name: GithubAction | Labelled PR dev to release
 on:
   pull_request:
     branches:
-      -new_app_versioning_testing
+      -master
     types: [labeled]
 
 jobs:
   bump_patch_version:
-    if: ${{ github.event.label.name == 'patch-release' ||  github.event.label.name == 'beta-patch-release' || github.event.label.name == 'beta-release'}}
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo content
