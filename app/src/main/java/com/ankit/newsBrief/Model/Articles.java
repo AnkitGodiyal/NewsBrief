@@ -6,9 +6,12 @@ public class Articles {
 
 
 
+
     @SerializedName("source")
     @Expose
     private Source source;
+
+
 
     @SerializedName("author")
     @Expose
