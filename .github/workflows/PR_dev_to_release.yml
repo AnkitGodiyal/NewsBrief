@@ -1,10 +1,9 @@
-
 name: GithubAction | PR dev to release
 
 on:
   push:
     branches:
-      -master
+      -new_app_versioning_test
 
 jobs:
   bump_minor_version:
