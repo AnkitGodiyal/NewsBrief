@@ -3,8 +3,6 @@ name: Octo Organization CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -15,3 +13,11 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello from Octo Organization
+
+      - name: setup python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.8 #install the python needed
+            - name: execute py script # run the run.py to get the latest data
+              run: |
+                UPDATE_TYPE=patch python bump_version.py
