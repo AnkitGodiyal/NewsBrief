@@ -1,50 +1,17 @@
-
-name: GithubAction | Labelled PR dev to release
+name: Octo Organization CI
 
 on:
+  push:
+    branches: [ master ]
   pull_request:
-    branches:
-      -master
-    types: [labeled]
+    branches: [ master ]
 
 jobs:
-  bump_patch_version:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner.
-      - name: setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8 #install the python needed
-      - name: execute py script # run the run.py to get the latest data
-        run: |
-          UPDATE_TYPE=patch python bump_version.py
-  bump_beta_version:
-    if: ${{ github.event.label.name == 'beta-release'}}
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner.
-      - name: setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8 #install the python needed
-      - name: execute py script # run the run.py to get the latest data
-        run: |
-          UPDATE_TYPE = beta python bump_version.py
-  bump_minor_version:
-    if: ${{ github.event.label.name == 'minor'}}
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner.
-      - name: setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8 #install the python needed
-      - name: execute py script # run the run.py to get the latest data
-        run: |
-          UPDATE_TYPE = minor python bump_version.py
 
+    steps:
+      - uses: actions/checkout@v2
 
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
