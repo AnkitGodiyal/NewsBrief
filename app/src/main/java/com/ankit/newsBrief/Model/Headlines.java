@@ -12,6 +12,8 @@ public class Headlines {
     @Expose
     private String status;
 
+
+
     @SerializedName("totalResults")
     @Expose
     private String totalResults;
