@@ -112,6 +112,7 @@ def cli():
     os.system('git add {0}'.format(GRADLE_FILE))
     os.system('git commit -m "Version Bumped to {0}"'.format(new_version_name))
     os.system('git push origin {0}'.format(BRANCH))
+    print('pushed {0}'.format(BRANCH))
 
 if __name__ == '__main__':
     cli()
