@@ -22,4 +22,4 @@ jobs:
         env:
           UPDATE_TYPE : patch
         run: |
-              echo "::set-env BRANCH= ${GITHUB_REF##*/}"
+              echo "::set-env name=BRANCH::${GITHUB_REF##*/}"
