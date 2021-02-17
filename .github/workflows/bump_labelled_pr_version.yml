@@ -1,7 +1,7 @@
 name: Octo Organization CI
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -10,6 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: nelonoel/branch-name@v1
+
 
       - name: Run a one-line script
         run: echo Hello from Octo Organization
@@ -21,5 +23,6 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         env:
           UPDATE_TYPE : patch
+          BRANCH : ${BRSNCH_NAME}
         run: |
           python bump_version.py
