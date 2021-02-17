@@ -24,3 +24,4 @@ jobs:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
               echo "::set-env name=BRANCH::${GITHUB_REF##*/}"
+              python bump_version.py
