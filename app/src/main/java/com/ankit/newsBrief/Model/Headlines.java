@@ -15,9 +15,6 @@ public class Headlines {
     @SerializedName("totalResults")
     @Expose
     private String totalResults;
-
-
-
     @SerializedName("articles")
     @Expose
     private List<News> articles;
