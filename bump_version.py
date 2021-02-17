@@ -109,9 +109,9 @@ def cli():
     with open(GRADLE_FILE, 'w') as f:
         f.write(new_file_data)
     print('pushing new version in branch {0}'.format(BRANCH))
-    # os.system('git add {0}'.format(GRADLE_FILE))
-    # os.system('git commit -m "Version Bumped to {0}"'.format(new_version_name))
-    # os.system('git push origin {0}'.format(BRANCH))
+    os.system('git add {0}'.format(GRADLE_FILE))
+    os.system('git commit -m "Version Bumped to {0}"'.format(new_version_name))
+    os.system('git push origin {0}'.format(BRANCH))
 
 if __name__ == '__main__':
     cli()
