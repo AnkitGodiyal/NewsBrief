@@ -19,5 +19,7 @@ jobs:
         with:
           python-version: 3.8 #install the python needed
       - name: execute py script # run the run.py to get the latest data
+        env:
+          UPDATE_TYPE : patch
         run: |
-          UPDATE_TYPE=patch python bump_version.py
+          python bump_version.py
