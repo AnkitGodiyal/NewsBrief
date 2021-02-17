@@ -23,5 +23,6 @@ jobs:
           UPDATE_TYPE : patch
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
+              git branch
               export BRANCH="branch_ankit_3970"
               python bump_version.py
