@@ -21,5 +21,6 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         env:
           UPDATE_TYPE : patch
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
               echo "::set-env name=BRANCH::${GITHUB_REF##*/}"
