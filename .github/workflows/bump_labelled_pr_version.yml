@@ -22,4 +22,4 @@ jobs:
         env:
           UPDATE_TYPE : patch
           BRANCH : ${GITHUB_REF##*/}
-        run: echo running on branch ${GITHUB_REF##*/}
+        run: echo running on branch ${BRANCH}
