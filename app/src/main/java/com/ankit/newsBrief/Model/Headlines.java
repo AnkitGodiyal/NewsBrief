@@ -19,8 +19,6 @@ public class Headlines {
 
 
 
-
-
     @SerializedName("articles")
     @Expose
     private List<News> articles;
