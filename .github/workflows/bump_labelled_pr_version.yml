@@ -21,6 +21,7 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         env:
           UPDATE_TYPE : patch
+          BRANCH : $(GITHUB_REF##*/)
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
               BRANCH=$(GITHUB_REF##*/)
