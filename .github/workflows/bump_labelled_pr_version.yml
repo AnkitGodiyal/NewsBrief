@@ -10,6 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: nelonoel/branch-name@v1
+
 
       - name: Run a one-line script
         run: echo Hello from Octo Organization
@@ -19,9 +21,8 @@ jobs:
         with:
           python-version: 3.8 #install the python needed
       - name: execute py script # run the run.py to get the latest data
-        uses: nelonoel/branch-name@v1
         env:
           UPDATE_TYPE : patch
-          BRANCH : ${BRANCH_NAME}
+          BRANCH : ${BRSNCH_NAME}
         run: |
           python bump_version.py
