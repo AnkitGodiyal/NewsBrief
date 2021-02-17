@@ -16,8 +16,8 @@ buildscript {
     }
 }
 
-def appVersionCode = 280600004
-def appVersionName = "6.0.0-patch-4"
+def appVersionCode = 280600005
+def appVersionName = "6.0.0-patch-5"
 
 allprojects {
     repositories {
