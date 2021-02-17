@@ -9,6 +9,7 @@ public class Articles {
     @Expose
     private Source source;
 
+
     @SerializedName("author")
     @Expose
     private String author;
