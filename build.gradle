@@ -16,6 +16,9 @@ buildscript {
     }
 }
 
+def appVersionCode = 280600001
+def appVersionName = "6.0.0-patch-1"
+
 allprojects {
     repositories {
         google()

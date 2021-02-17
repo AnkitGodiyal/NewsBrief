@@ -2,7 +2,7 @@ import os
 import re
 import sys
 
-GRADLE_FILE = './grofers/build.gradle'
+GRADLE_FILE = 'build.gradle'
 VERSION_NAME_PATTERN = 'def *appVersionName *=  *\"(.*)\"'
 VERSION_CODE_PATTERN = 'def *appVersionCode *= *(28(\d\d)(\d\d)(\d\d)(\d))'
 
