@@ -1,7 +1,7 @@
 name: Octo Organization CI
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -23,5 +23,5 @@ jobs:
           UPDATE_TYPE : patch
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
-              export BRANCH=$(git rev-parse --abbrev-ref HEAD)
+              export BRANCH="branch_ankit_3970"
               python bump_version.py
