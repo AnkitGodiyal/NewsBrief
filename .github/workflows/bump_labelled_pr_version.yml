@@ -22,5 +22,4 @@ jobs:
         env:
           UPDATE_TYPE : patch
           BRANCH : ${GITHUB_REF#refs/heads/}
-        run: |
-          python bump_version.py
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
